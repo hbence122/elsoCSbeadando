@@ -15,9 +15,15 @@ namespace CSbeadando
 
             int db = 0;
             
-            
 
-            while (db != 10)
+            Console.WriteLine("Adja meg a lista elemszámát: ");
+            int listaElem = Convert.ToInt32(Console.ReadLine());
+
+
+
+
+
+            while (db != listaElem)
             {
                 Console.WriteLine("Adjon meg egy számot!");
                 szamok.Add(Convert.ToInt32(Console.ReadLine()));
