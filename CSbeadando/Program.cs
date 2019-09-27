@@ -14,23 +14,32 @@ namespace CSbeadando
         {
 
             int db = 0;
-            
 
-            Console.WriteLine("Adja meg a lista elemszámát: ");
-            int listaElem = Convert.ToInt32(Console.ReadLine());
-
-
-
-
-
-            while (db != listaElem)
+            try
             {
-                Console.WriteLine("Adjon meg egy számot!");
-                szamok.Add(Convert.ToInt32(Console.ReadLine()));
-                db++;
-            }
+                Console.WriteLine("Adja meg a lista elemszámát: ");
+                int listaElem = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("A legnagyobb szám: " + szamok.Max());
+
+
+
+
+                while (db != listaElem)
+                {
+                    Console.WriteLine("Adjon meg egy számot!");
+                    szamok.Add(Convert.ToInt32(Console.ReadLine()));
+                    db++;
+                }
+
+                Console.WriteLine("A legnagyobb szám: " + szamok.Max());
+                Console.WriteLine("A legkisebb szám: " + szamok.Min());
+            }
+            catch (Exception)
+            {
+
+                Console.WriteLine("Nem számot adott meg!0");
+            }
+            
 
 
             Console.ReadKey();
